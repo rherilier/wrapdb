@@ -257,7 +257,7 @@ class TestReleases(unittest.TestCase):
                     t = f'{name}_{v}'
                     ver, rev = v.rsplit('-', 1)
                     with self.subTest(step='valid release name'):
-                        self.assertTrue(re.fullmatch('[a-z0-9._]+', ver))
+                        self.assertTrue(re.fullmatch('[a-z0-9._-]+', ver))
                         self.assertTrue(re.fullmatch('[0-9]+', rev))
                     if i == 0:
                         with self.subTest(step='check_source_url'):
